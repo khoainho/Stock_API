@@ -1,9 +1,7 @@
 const stocks = require('./stock_array');
 const express = require('express');
 const morgan = require('morgan');
-const stockController = require('./controllers/stocks_controller');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
+const stockController = require('./controllers/stocks_controller.js');
 
 const app = express();
 const port = 3000;

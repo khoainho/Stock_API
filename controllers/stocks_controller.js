@@ -21,7 +21,7 @@ router.get('/page/:pageNum', (req,res,next) => {
 // Display data for a specified ticker symbol 
 router.get('/:symbol', (req,res,next) => {
     let ticker = req.params.symbol.toUpperCase();
-    let tickerIndex = stocks.findIndex(stock => stock.ticker == ticker)
+    let tickerIndex = stocks.findIndex(stock => stock.ticker === ticker)
 
     if (tickerIndex > -1) {
         res.json(stocks[tickerIndex]);
@@ -33,10 +33,10 @@ router.get('/:symbol', (req,res,next) => {
 // Display the current price of the specified ticker symbol 
 router.get('/price/:symbol', (req,res,next) => {
     let ticker = req.params.symbol.toUpperCase();
-    let tickerIndex = stocks.findIndex(stock => stock.ticker == ticker)
+    let tickerIndex = stocks.findIndex(stock => stock.ticker === ticker)
 
     if (tickerIndex > -1) {
-        res.json({'currPrice' : stocks[tickerIndex],currPrice});
+        res.json({'currPrice' : stocks[tickerIndex].currPrice});
     } else {
         next({status: 404, message: `The ticker, ${ticker}, is not in our current database`});
     }
