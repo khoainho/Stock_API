@@ -10,12 +10,17 @@ router.get('/page/:pageNum', (req,res,next) => {
 
     if(pageNum <= maxPages){
         let startIndex = pageLength*(pageNum);
-        let output = stocks.slice(startIndex,startIndex+pageLength);
+        let output = stocks.slice(startIndex, startIndex+pageLength);
 
         res.json(output);
     } else {
         next({status: 404, message: `Page number invalid - last page is ${maxPages}`});
     }
+})
+
+// Display all stocks in database
+router.get('/', (req,res,next) => {
+    res.json(stocks)
 })
 
 // Display data for a specified ticker symbol 
