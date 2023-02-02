@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const stocks = require('../stock_array.js');
+const stocks = require('../data/stock_array');
 
 // Display page of stocks based on page number
 router.get('/page/:pageNum', (req,res,next) => {

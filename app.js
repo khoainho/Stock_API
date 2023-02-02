@@ -1,4 +1,4 @@
-const stocks = require('./stock_array');
+const stocks = require('./data/stock_array');
 const express = require('express');
 const morgan = require('morgan');
 const stockController = require('./controllers/stocks_controller.js');
