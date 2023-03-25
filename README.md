@@ -6,6 +6,9 @@ This is a simple Express application stock API that return data about stocks.
 ### Technologies 
 * JavsScript
 * Express
+* Node.js
+* Nodemon
+* Morgan
 
 ## Setup Instructions
 1. Clone repository to your local machine using SSH key
