@@ -4,7 +4,7 @@
 This is a simple Express application stock API that return data about stocks.
 
 ### Technologies 
-* JavasScript
+* JavaScript
 * Express
 * Node.js
 * Nodemon
